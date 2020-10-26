@@ -5,7 +5,7 @@
   const meetups = [
     {
       id: 'm1',
-      title: 'Conding Bootcamp',
+      title: 'Coding Bootcamp',
       subtitle: 'Learn to code in 2 hours',
       description:
         'In this meetup, we will have some experts that teach you how to code.',
@@ -37,6 +37,12 @@
 
 <section id="meetups">
   {#each meetups as meetup}
-    <MeetupItem />
+    <MeetupItem
+      title={meetup.title}
+      subtitle={meetup.subtitle}
+      description={meetup.description}
+      imageUrl={meetup.imageUrl}
+      address={meetup.address}
+      email={meetup.contactEmail} />
   {/each}
 </section>
