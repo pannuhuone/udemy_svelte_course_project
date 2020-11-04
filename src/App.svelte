@@ -10,24 +10,13 @@
   // let meetups = ;
 
   function addMeetup(event) {
-    const meetupData = {
-      title: event.detail.title,
-      subtitle: event.detail.subtitle,
-      description: event.detail.description,
-      imageUrl: event.detail.imageUrl,
-      contactEmail: event.detail.email,
-      address: event.detail.address,
-    };
-
-    // meetups = [newMeetup, ...meetups];
-    meetups.addMeetup(meetupData);
     editMode = null;
   }
 
-  function toggleFavorite(event) {
-    const id = event.detail;
-    meetups.toggleFavorite(id);
-  }
+  // function toggleFavorite(event) {
+  //   const id = event.detail;
+  //   meetups.toggleFavorite(id);
+  // }
 
   function cancelEdit() {
     editMode = null;
@@ -54,5 +43,5 @@
     <EditMeetup on:save={addMeetup} on:cancel={cancelEdit} />
   {/if}
 
-  <MeetupGrid meetups={$meetups} on:togglefavorite={toggleFavorite} />
+  <MeetupGrid meetups={$meetups} />
 </main>
