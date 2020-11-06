@@ -2,7 +2,6 @@
   import meetups from './Meetups/meetups-store.js';
   import Header from './UI/Header.svelte';
   import MeetupGrid from './Meetups/MeetupGrid.svelte';
-  import Button from './UI/Button.svelte';
   import EditMeetup from './Meetups/EditMeetup.svelte';
   import MeetupDetail from './Meetups/MeetupDetail.svelte';
 
